@@ -1,0 +1,211 @@
+.containerNeon {
+    min-height: 100vh;
+}
+.titulo {
+    width: 100%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    padding: 40px 0;
+}
+.boxEspecialidade {
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px;
+    color: white;
+}
+
+.boxNeon {
+    position: relative;
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 10px 20px;
+    color: #a2a2a2;
+    letter-spacing: 2px;
+    transition: ease-in-out .7s;
+    overflow: hidden;
+    -webkit-box-reflect: below .3px linear-gradient(transparent, #0005);
+}
+
+/* Color do texto */
+.boxNeon svg {
+    color: #03e9f4;
+    text-shadow: 3px 3px 5px #000;
+}
+
+.boxNeon:nth-child(1) {
+    filter: hue-rotate(205deg);
+}
+
+.boxNeon:nth-child(3) {
+    filter: hue-rotate(250deg);
+}
+
+.boxNeon:nth-child(4) {
+    filter: hue-rotate(270deg);
+}
+
+.boxNeon:hover {
+    transition: all ease-in-out 0.7s;
+    transform: scale(1.15);
+    background-color: #03e9f4;
+    text-shadow: 3px 3px 17px #000;
+    color: #ffffff;
+    box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 200px #03e9f4;
+}
+
+.boxNeon:hover , .boxNeon:hover svg {
+    color: white;
+    transition: all ease-in-out 0.7s;
+}
+
+.boxNeon div {
+    position: absolute;
+    display: block;
+}
+
+.boxNeon div:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: round1 1.5s linear infinite;
+}
+
+@keyframes round1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.boxNeon div:nth-child(2) {
+    right: 0;
+    top: -100%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: round2 1.5s linear infinite;
+    animation-delay: .25s;
+}
+
+@keyframes round2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.boxNeon div:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: round3 1.5s linear infinite;
+    animation-delay: .5s;
+}
+
+@keyframes round3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.boxNeon div:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: round4 1.5s linear infinite;
+    animation-delay: .75s;
+}
+
+@keyframes round4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+.boxCardEspecialidade {
+    text-align: center;
+}
+
+.boxCardEspecialidade h3 {
+    color: #404580;
+    font-size: 40px;
+}
+
+.boxCardEspecialidade h4 {
+    padding-bottom: 18px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #ededed;
+}
+
+.boxCardEspecialidade p {
+    font-weight: 300;
+}
+
+/* Medias querys */
+@media screen and (max-width: 1224px) {
+    .boxNeon:hover {
+        transform: scale(1.05);
+    }
+    .boxNeon {
+        align-items: center;
+        -webkit-box-reflect: below .3px linear-gradient(transparent, rgba(0, 0, 0, 0));
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .boxEspecialidade {
+        flex-direction: column;
+        padding: 0 6%;
+    }
+
+
+    .boxCardEspecialidade {
+        margin: 0;
+        padding: 40px 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .titulo {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-height: 780px) {
+    .boxNeon {
+        -webkit-box-reflect: below .3px linear-gradient(transparent, rgba(0, 0, 0, 0));
+    }
+}

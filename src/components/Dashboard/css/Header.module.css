@@ -1,0 +1,58 @@
+.clear {
+  clear: both;
+}
+
+.center {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2%;
+  /* margin: 0 auto; */
+}
+
+.loggout {
+  height: 10px;
+}
+
+.loggout svg {
+  color: white;
+}
+
+.loggout a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  padding: 6px 8px;
+
+}
+
+.loggout a:hover {
+  background-color: rgba(136, 136, 136, 0.357);
+  transition: 0.5s;
+}
+
+.menuBtn {
+  /* float: left; */
+  color: white;
+  cursor: pointer;
+}
+.menuBtn i {
+  font-size: 18px;
+}
+
+.top {
+  width: 100%;
+  position: absolute;
+  z-index: 9;
+  background-color: #0e0b16;
+  padding: 11px 0;
+  transition: 300ms ease-in-out;
+  box-shadow: 0px 11px 14px -3px rgba(0, 0, 0, 0.663);
+}
+
+@media screen and (max-width: 1024px) {
+  .top {
+    width: 100%;
+    left: 0;
+    z-index: 9999;
+  }
+}

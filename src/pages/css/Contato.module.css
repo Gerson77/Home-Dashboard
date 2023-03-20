@@ -1,0 +1,149 @@
+.containerForm {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  background-image: url("../../assets/web-design-online.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlayForm {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 0;
+  background-color: rgba(0, 0, 0, 0.897);
+  background: linear-gradient(
+    137deg,
+    rgba(66, 65, 65, 0.897) 0%,
+    rgba(0, 0, 0, 0.897) 45%,
+    rgba(0, 0, 0, 0.749) 82%,
+    rgba(1, 1, 14, 0.525) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.boxDescription {
+  width: 55%;
+  color: #fff;
+  padding: 50px 20px;
+  border-radius: 20px;
+  margin: 50px;
+}
+
+.boxDescription h2 {
+  font-size: 48px;
+  padding-bottom: 18px;
+}
+
+.boxDescription p {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+
+.boxForm {
+  width: 30%;
+  max-width: 600px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.boxForm label {
+  color: white;
+  display: block;
+  padding: 0 10px 8px 0;
+}
+
+.boxForm h2 {
+  color: white;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.painel {
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgba(147, 144, 144, 0.918);
+  box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.75);
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  outline: none;
+  font-weight: 400;
+}
+
+.form input[type="submit"] {
+  margin-top: 12px;
+  cursor: pointer;
+  height: 46px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(58, 19, 95);
+  color: white;
+  transition: 0.3s all ease-in-out;
+  border: 1px solid rgb(58, 19, 95);
+}
+
+.form input[type="submit"]:hover {
+  background-color: rgb(37, 11, 62);
+}
+
+@media screen and (max-width: 1144px) {
+  .painel {
+    margin: 10px auto;
+    width: 100%;
+  }
+
+  .boxForm {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .overlayForm {
+    flex-direction: column;
+  }
+
+  .boxDescription {
+    width: 100%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 50px 20%;
+    margin: 50px 0px 0px 0px;
+    box-shadow: none;
+  }
+
+  .boxDescription h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .boxDescription {
+    padding: 50px 6%;
+  }
+
+  .boxDescription h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+}

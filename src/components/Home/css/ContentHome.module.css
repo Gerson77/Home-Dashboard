@@ -1,0 +1,367 @@
+img {
+  width: 100%;
+  max-width: 500px;
+  height: 450px;
+}
+
+.centerHome {
+  max-width: 1280px;
+  padding: 0 2%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #090909;
+  border-bottom: 1px solid rgb(155, 155, 155);
+}
+
+header .logo {
+  color: white;
+  font-size: 23px;
+  font-weight: 700;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.mobile {
+  display: none;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+nav.desktop ul {
+  list-style-type: none;
+  position: relative;
+  top: 20px;
+}
+
+nav.desktop li {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0 30px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+nav.desktop a {
+  color: white;
+  text-decoration: none;
+}
+
+.bannerPrincipal {
+  width: 100%;
+  height: 600px;
+  background-image: url("../../../assets/back-home.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.overlayHome {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgb(44, 44, 44);
+  background: linear-gradient(
+    180deg,
+    rgba(152, 152, 152, 0.502) 0%,
+    rgba(57, 57, 57, 0.678) 45%,
+    rgba(0, 0, 0, 0.911) 82%,
+    rgba(1, 1, 14, 1) 100%
+  );
+}
+
+.bannerPrincipal section {
+  width: 93%;
+  max-width: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.bannerPrincipal section h2 {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.bannerInfo h2 {
+  margin: 20px auto;
+}
+.bannerInfo a {
+  width: 100%;
+  height: 66px;
+  background: #00c59e;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.bannerInfo a:hover {
+  background: #06a182;
+}
+
+/* Section descrição */
+section.descricaoAutor {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 18px;
+  text-align: center;
+  background: linear-gradient(131.88deg, #43046a 14.48%, #0f1010 83.43%);
+  box-shadow: 0px 11px 15px 1px rgba(0, 0, 0, 0.64);
+}
+
+section.descricaoAutor h2 {
+  font-size: 28px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+.descricaoConteudo {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 10%;
+}
+
+section.descricaoAutor p {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgb(224, 224, 224);
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.autorUser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 15px;
+}
+
+.autorUser img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(25, 22, 120);
+  border: 2px solid #6b6b6b;
+}
+
+/* Especialidades */
+.especialidades {
+  min-height: 100vh;
+  padding: 60px 0;
+  background: linear-gradient(131.88deg, #020e21 14.48%, #000000 83.43%);
+}
+
+section.extras {
+  padding: 30px;
+  background-color: #1e1850;
+  background: linear-gradient(131.88deg, #1e1850 14.48%, #000000 83.43%);
+}
+
+.sobreTitulo {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.sobreTitulo h2 {
+  text-align: center;
+  font-size: 40px;
+  border-bottom: #eeeff3 !important;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Redes sociais */
+.mediaSociais {
+  color: white;
+  text-align: center;
+  margin: 100px 0;
+  transition: 1s all ease-in-out;
+}
+
+.mediaSociais h2 {
+  padding-bottom: 20px;
+}
+
+.redesSociais {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  transition: 1.3s all ease-in-out;
+}
+
+.redesSociais div {
+  width: 88px;
+  height: 88px;
+  background: linear-gradient(131.88deg, #a73ee7 14.48%, #0077ff 83.43%);
+  border-radius: 50%;
+}
+
+.redesSociais svg {
+  font-size: 46px;
+  cursor: pointer;
+  margin-top: 22px;
+
+  color: rgb(186, 178, 178);
+  transition: 0.3s all ease-in-out;
+}
+
+.redesSociais svg:hover {
+  transition: 0.3s all ease-in-out;
+  transform: scale(1.22);
+}
+
+/* Style BTN */
+.btn-mobile {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 25px;
+  margin: 10px;
+  color: white;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 3px;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -5px);
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* Medias querys */
+
+@media screen and (max-width: 1024px) {
+  img {
+    float: none !important;
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  .w50 {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .w33 {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .autorUser {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .especialidades {
+    padding: 20px 2%;
+    height: 100%;
+    /* min-height: 100vh; */
+  }
+}
+
+@media screen and (max-width: 925px) {
+  nav.desktop {
+    display: none;
+  }
+
+  nav.mobile {
+    display: block;
+  }
+
+  nav.mobile ul {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 57px;
+    left: 0;
+    z-index: 3;
+    text-align: center;
+    background-color: rgba(240, 240, 240, 0.808);
+  }
+
+  nav.mobile li {
+    padding: 10px 0;
+    font-weight: 400;
+    width: 100%;
+    display: block;
+    font-size: 20px;
+    border-bottom: 1px solid #444;
+  }
+
+  nav.mobile li a {
+    display: block;
+    color: #444;
+    text-decoration: none;
+  }
+
+  nav.mobile li:hover {
+    background-color: rgba(102, 102, 102, 0.658);
+    transition: 0.2s;
+  }
+
+  nav.mobile a:hover {
+    color: white;
+    transition: 0.2s;
+  }
+
+  .container-portal {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .box-extras {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section.descricaoAutor img {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .redesSociais {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+}

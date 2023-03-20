@@ -1,0 +1,150 @@
+
+.boxMenu {
+  width: 320px;
+  height: 100vh;
+  min-height: 100vh;
+  background-color: #021b2b;
+  background-image: url("https://i.pinimg.com/736x/0f/05/b9/0f05b9c45d4b153ca74a5ad42e9078d7.jpg");
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: 300ms ease-in-out;
+  position: fixed;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+.disable {
+  width: 0;
+  transition: 300ms ease-in-out;
+  height: 100vh;
+
+  background-color: #021b2b;
+  background-image: url("https://i.pinimg.com/736x/0f/05/b9/0f05b9c45d4b153ca74a5ad42e9078d7.jpg");
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: 300ms ease-in-out;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.boxUser {
+  width: 320px;
+  text-align: center;
+  padding-top: 20px;
+}
+.boxAvatar {
+  text-align: left;
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background-color: rgb(104, 23, 186);
+}
+
+.boxAvatar svg {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: white;
+}
+
+.boxImage img {
+  text-align: left;
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+.nameUser {
+  display: flex;
+  margin-top: 10px;
+  background-color: #00aa22;
+}
+
+.nameUser p {
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+}
+.nameUser svg {
+  padding: 15px;
+  font-size: 60px;
+  color: white;
+  border-right: 2px solid rgb(37, 37, 37);
+}
+
+.titleUser {
+  padding: 10px;
+}
+.titleUser p {
+  text-align: center;
+  padding-left: 25px;
+}
+
+
+.itensMenu {
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.itensMenu h2 {
+  font-weight: 300;
+  background-color: #1b0470;
+  padding: 8px;
+  font-size: 20px;
+}
+
+.itensMenu a {
+  font-weight: 300;
+  padding-left: 8px;
+  display: block;
+  color: white;
+  line-height: 40px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.491);
+  transition: 0.3s all ease-in-out;
+}
+
+.itensMenu a:hover {
+  background-color: rgba(58, 55, 55, 0.958);
+}
+
+.boxImgBack {
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.705);
+}
+
+@media screen and (max-width: 1280px) {
+  .listGroupItem {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .boxMenu {
+    width: 0;
+    z-index: 99;
+  }
+
+
+  .disable {
+    z-index: 99;
+
+    width: 320px;
+    transition: 300ms ease-in-out;
+  }
+
+  .boxUser {
+    padding-top: 60px;
+  }
+}

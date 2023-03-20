@@ -1,0 +1,96 @@
+.center {
+  padding: 0 2%;
+  margin: 0 auto;
+}
+
+/* Conteudo */
+.content {
+  width: calc(100% - 320px);
+  padding: 10px;
+  position: relative;
+  left: 320px;
+  transition: 300ms ease-in-out;
+}
+.contentActive {
+  width: 100%;
+  position: relative;
+  left: 0;
+
+  padding: 10px;
+  transition: 300ms ease-in-out;
+}
+.containerContent {
+  padding: 50px 0px 10px 0;
+}
+
+.boxContent {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0px 10px 10px 10px;
+}
+
+/* Tabela */
+.tableResponsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 15px;
+  padding: 5px;
+}
+
+.rowCard {
+  background-color: rgb(60, 23, 86);
+  box-shadow: 5px 5px 8px 1px rgba(54, 54, 54, 0.329);
+  border-radius: 6px;
+  transition: all ease-in-out 0.3s;
+  color: #fff;
+}
+
+.rowCardSuccess {
+  background-color: rgb(65, 171, 71);
+  box-shadow: 5px 5px 8px 1px rgba(54, 54, 54, 0.329);
+  border-radius: 6px;
+  transition: all ease-in-out 0.3s;
+  color: #fff;
+}
+
+.col {
+  margin: 10px;
+}
+
+.rowCard:hover {
+  background-color: rgb(40, 12, 58);
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.boxSearch {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  align-items: center;
+}
+
+.boxSearch input {
+  width: 240px;
+  padding: 4px 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .rowCard {
+    width: 100%;
+  }
+
+  .boxSearch {
+    display: grid;
+    align-items: center;
+  }
+  .boxSearch input {
+    width: 100%;
+    padding: 4px 10px;
+  }
+
+}

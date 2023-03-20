@@ -1,0 +1,252 @@
+.center {
+  padding: 0 2%;
+  margin: 0 auto;
+}
+
+/* Conteudo */
+.content {
+  width: calc(100% - 320px);
+  padding: 10px;
+  position: relative;
+  left: 320px;
+  transition: 300ms ease-in-out;
+}
+.contentActive {
+  width: 100%;
+  position: relative;
+  left: 0;
+
+  padding: 10px;
+  transition: 300ms ease-in-out;
+}
+.containerContent {
+  padding: 50px 0px 10px 0;
+}
+
+.boxContent {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0px 10px 10px 10px;
+}
+
+.card {
+  display: flex;
+}
+
+.boxCard {
+  color: white;
+  margin: 10px;
+  width: calc(100% / 3);
+  border-radius: 5px;
+  box-shadow: 4px 5px 11px -3px rgba(0, 0, 0, 0.75);
+  transition: transform 100ms ease-in-out;
+  padding: 20px;
+}
+
+.boxCard:nth-child(1) {
+  /* background-color: #00aa22; */
+  background: linear-gradient(190deg, #42FF00 5.05%, rgba(10, 35, 1, 0.753) 103.87%);
+}
+.boxCard:nth-child(2) {
+  /* background-color: #bb1b15; */
+  background: linear-gradient(190deg, #00A2FD 3.39%, rgba(0, 0, 0, 0.753) 105.65%);
+}
+.boxCard:nth-child(3) {
+  /* background-color: #e2b111; */
+  background: linear-gradient(190deg, #FF5C00 12.22%, rgba(78, 32, 6, 0.753) 102.51%);
+}
+.order {
+  background-color: #4a4a4a;
+}
+.primary {
+  background-color: #1989cf;
+}
+
+.boxCard:hover {
+  transform: scale(1.05);
+}
+
+.boxCard h2 {
+  font-weight: 300;
+}
+.boxCard p {
+  font-weight: 100;
+  margin-top: 20px;
+}
+
+/* Tabela */
+.tableResponsive {
+  margin: 10px 20px;
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.row:nth-child(1) {
+  font-weight: bold;
+  border-bottom: 1px solid rgb(78, 78, 78);
+}
+
+.col {
+  width: 50%;
+  border-bottom: 1px solid #ccc;
+  padding: 3px 0;
+}
+.boxContent h2 {
+  margin: 0 0 20px 10px;
+}
+
+.btn {
+  padding: 4px 6px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  margin: 5px;
+  position: relative;
+  top: -5px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  background-color: rgb(70, 144, 209);
+  font-weight: 500;
+}
+
+.btnDel {
+  background-color: rgb(209, 70, 70);
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+.more a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+/* Formulário add */
+
+form {
+  margin: 10px;
+}
+
+form label {
+  font-size: 17px;
+  font-weight: 300;
+  color: black;
+  display: block;
+  padding: 10px 0;
+}
+
+form input {
+  font-size: 17px;
+  font-weight: normal;
+  color: black;
+  width: 100%;
+  height: 40px;
+  padding-left: 8px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+form input[type=submit] {
+  height: 52px;
+  margin: 30px 0;
+  cursor: pointer;
+  background-color: #00aa22;
+  border: 1px solid rgb(204, 204, 204);
+  color: white;
+  font-weight: bold;
+  transition: all ease-in-out .3s;
+}
+
+form input[type=submit]:hover {
+  background-color: #048d20;
+}
+
+select {
+  width: 100%;
+  height: 40px;
+  font-size: 17px;
+  font-weight: normal;
+  color: black;
+  padding-left: 8px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+form .image {
+  height: 220px;
+  margin: 10px auto;
+  padding-top: 10px;
+  background-color: rgb(107, 59, 184);
+  border-radius: 5px;
+}
+
+form input[type="file"] {
+  display: none;
+}
+
+.file {
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(43, 172, 92);
+  cursor: pointer;
+  position: relative;
+  top: 12%;
+  left: 55%;
+  transform: translate(-70%, -150%);
+}
+.file svg {
+  font-size: 22px;
+  margin-top: 10px;
+  color: white;
+}
+
+form img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 1024px) {
+  .content {
+    width: 100%;
+    position: relative;
+    left: 0;
+    transition: 300ms ease-in-out;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .boxCard {
+    margin: 10px auto;
+    width: 95%;
+    padding: 10px;
+  }
+}

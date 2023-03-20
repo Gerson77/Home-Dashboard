@@ -1,0 +1,100 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #e2dfdf;
+}
+
+.boxMenu {
+  width: 320px;
+  height: 100vh;
+  min-height: 100vh;
+  background-color: #021b2b;
+  background-image: url("https://i.pinimg.com/736x/0f/05/b9/0f05b9c45d4b153ca74a5ad42e9078d7.jpg");
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: 300ms ease-in-out;
+  position: fixed;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+.disable {
+  width: 0;
+}
+
+/* Conteudo */
+.content {
+  width: calc(100% - 320px);
+  position: relative;
+  left: 320px;
+  transition: 300ms ease-in-out;
+}
+.contentActive {
+  width: 100%;
+  left: 0;
+}
+
+/* Scrollbar sidebar */
+.boxMenu::-webkit-scrollbar {
+  width: 12px;
+}
+
+.boxMenu::-webkit-scrollbar-track {
+  background: rgb(150, 150, 150);
+}
+
+.boxMenu::-webkit-scrollbar-thumb {
+  background-color: rgb(235, 235, 235);
+  border-radius: 20px;
+  border: 3px solid rgb(70, 70, 68);
+}
+
+/* Srollbar Página */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(140, 138, 138);
+  border-radius: 20px;
+  border: 3px solid rgb(70, 70, 68);
+}
+
+/* Scrollbar for Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(189, 189, 189) rgb(52, 52, 52);
+}
+.boxMenu {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(189, 189, 189) rgb(52, 52, 52);
+}
+
+@media screen and (max-width: 1024px) {
+  .boxMenu {
+    width: 0;
+    z-index: 99;
+  }
+  .top {
+    width: 100%;
+    left: 0;
+    z-index: 9999;
+  }
+
+  .content {
+    width: 100%;
+    left: 0;
+  }
+
+  .disable {
+    z-index: 99;
+    width: 320px;
+  }
+
+}

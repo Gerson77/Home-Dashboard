@@ -1,0 +1,32 @@
+.centerNotFound {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(31, 31, 31);
+}
+
+.centerNotFound > svg{
+    height: 100px;
+    width: 100px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.centerNotFound h2 {
+    color: #fff;
+}
+
+.centerNotFound strong {
+    color: rgb(212, 58, 58);
+}
+
+.centerNotFound a {
+    color: #fff;
+}
+.centerNotFound svg {
+    font-size: 40px;
+    padding-top: 20px;
+}
