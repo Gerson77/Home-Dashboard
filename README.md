@@ -1,5 +1,8 @@
 # Projeto: Página Home + Dashboard
 
+## Descrição: 
+- Projetos desenvolvido para aplicar conhecimentos adquiridos em cursos
+
 ### Pendências:
 ---
 - [x] Criar usuário pela dash
@@ -12,3 +15,11 @@
 - [ ] Revisar o css das páginas e components
 - [ ] revisar os tipos 
 - [ ] Páginação dos usuários
+
+
+
+---
+
+OBS: 
+
+:warning: Projeto em andamento 
