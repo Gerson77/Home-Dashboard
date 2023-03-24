@@ -8,12 +8,12 @@ import Route404 from "./pages/404";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useApi } from "./hooks/useApi/useApi";
+import { RootState } from "./main";
 
 function App() {
-  // const isAuth = Boolean(useSelector((state: any) => state.token));
-  const isAuth = useSelector((state: any) => state.token);
-  const userAuth = useSelector((state: any) => state.user);
-
+  const isAuth = useSelector((state: RootState) => state.token);
+  const userAuth = useSelector((state: RootState) => state.user);
+  
   const api = useApi();
 
   const valideToken = async () => {

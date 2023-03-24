@@ -5,6 +5,7 @@ import ModalContainer from "./ModalContainer";
 import { useSelector } from "react-redux";
 import { useApi } from "../../../hooks/useApi/useApi";
 import { ResultData } from "../../../types/ResultData";
+import { RootState } from "../../../main";
 
 export function ListUsers() {
   const [modal, setModal] = useState(false);
@@ -12,7 +13,7 @@ export function ListUsers() {
   const [userName, setUserName] = useState("");
 
   const api = useApi();
-  const token = useSelector((state: any) => state.token);
+  const token = useSelector((state: RootState) => state.token);
   const [data, setData] = useState<ResultData[]>([]);
 
   const modalOpen = (id: string, name: string) => {

@@ -7,10 +7,11 @@ import { useApi } from "../../../hooks/useApi/useApi";
 import { useSelector } from "react-redux";
 import { BoxAlert } from "../../Home/BoxAlert";
 import useAlertBox from "../../../hooks/useAlert/useAlert";
+import { RootState } from "../../../main";
 
 export function ListClients() {
   const api = useApi();
-  const token = useSelector((state: any) => state.token);
+  const token = useSelector((state: RootState) => state.token);
 
   const [isModal, setModal] = useState(false);
   const [userId, setUserId] = useState("");
@@ -78,7 +79,7 @@ export function ListClients() {
     return clientUpdate;
   };
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     setSearchValue(value);
   };

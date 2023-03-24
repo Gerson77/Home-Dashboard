@@ -7,20 +7,22 @@ import useAlertBox from "../../../hooks/useAlert/useAlert";
 import useLoading from "../../../hooks/useLoading/useLoading";
 import { BoxAlert } from "../../Home/BoxAlert";
 import { useSelector } from "react-redux";
+import { RootState } from "../../../main";
 
 export function PerfilUser() {
-  const user = useSelector((state: any) => state.user)
-  const token = useSelector((state: any) => state.token)
+  const { user, token } = useSelector((state: RootState) => state);
+  // const token = useSelector((state: RootState) => state.token)
+
   const api = useApi();
   const [name, setName] = useState(user?.name);
   const [email, setEmail] = useState(user?.email);
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
 
   const { alert, setAlert, alertInfo, setAlertInfo, hiddenBoxAlert } =
     useAlertBox();
   const { loading, setLoading } = useLoading();
 
-  async function handleSubmit(e: any) {
+  async function handleSubmit(e: React.FormEvent<HTMLInputElement>) {
     e.preventDefault();
 
     if (!name || !email) {
@@ -38,11 +40,16 @@ export function PerfilUser() {
         text: "Digite sua senha para continuar",
       });
     } else {
-      const userId = api.editUser(`user/${user.id}`, {
-          name,
-          email,
-          password,
-        }, token)
+      const userId = api
+        .editUser(
+          `user/${user.id}`,
+          {
+            name,
+            email,
+            password,
+          },
+          token
+        )
         .then((res) => {
           setLoading(true);
           setAlert(true);
@@ -54,7 +61,7 @@ export function PerfilUser() {
           setLoading(false);
           setName(user?.name);
           setEmail(user?.email);
-          setPassword('');
+          setPassword("");
         })
         .catch((err) => {
           setAlert(true);

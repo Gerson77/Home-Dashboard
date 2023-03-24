@@ -3,11 +3,12 @@ import { FaBars, FaHouseUser } from "react-icons/fa";
 import { GiExitDoor } from "react-icons/gi";
 
 import { Link } from "react-router-dom";
+// @ts-ignore
 import { setLogout } from "../../state";
 import { useDispatch } from "react-redux";
 
 type PropsHeader = {
-  event: any;
+  event: React.MouseEventHandler<SVGElement>;
 };
 
 export function Header({ event }: PropsHeader) {

@@ -1,12 +1,13 @@
 import { FaTable, FaUser, FaUsers } from "react-icons/fa";
 import { BsGear } from "react-icons/bs";
 import { Link } from "react-router-dom";
-
 import styles from "../Dashboard/css/Asidebar.module.css";
+
 import { useSelector } from "react-redux";
+import { RootState } from "../../main";
 
 export function Asidebar({ asideStyle }: any) {
-  const user = useSelector((state: any) => state.user)
+  const user = useSelector((state: RootState) => state.user)
   
   return (
     <aside className={asideStyle}>

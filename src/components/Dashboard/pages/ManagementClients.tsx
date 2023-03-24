@@ -5,12 +5,13 @@ import { useCallback, useEffect, useState } from "react";
 import { ResultData } from "../../../types/ResultData";
 import { useApi } from "../../../hooks/useApi/useApi";
 import { useSelector } from "react-redux";
+import { RootState } from "../../../main";
 
 export function ManagementClients() {
   const [userId, setUserId] = useState("");
   const [userName, setUserName] = useState("");
   const api = useApi();
-  const token = useSelector((state: any) => state.token);
+  const token = useSelector((state: RootState) => state.token);
   const [data, setData] = useState<ResultData[]>([]);
 
   const [searchValue, setSearchValue] = useState("");
@@ -37,7 +38,7 @@ export function ManagementClients() {
     getAllData();
   }, []);
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     setSearchValue(value);
   };

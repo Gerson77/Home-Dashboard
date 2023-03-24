@@ -9,11 +9,13 @@ import { BoxAlert } from "../../Home/BoxAlert";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+import type { RootState } from '../../../main'
+
 export function EditUser() {
   const api = useApi();
   const { id } = useParams<{ id: string }>();
   
-  const token = useSelector((state: any) => state.token)
+  const token = useSelector((state: RootState) => state.token)
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

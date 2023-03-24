@@ -7,10 +7,11 @@ import useAlertBox from "../../../hooks/useAlert/useAlert";
 import { Loading } from "../../Home/Loading";
 import useLoading from "../../../hooks/useLoading/useLoading";
 import { useSelector } from "react-redux";
+import { RootState } from "../../../main";
 
 export function AddUser() {
   const api = useApi();
-  const token = useSelector((state: any) => state.token)
+  const token = useSelector((state: RootState) => state.token)
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,7 +20,7 @@ export function AddUser() {
     useAlertBox();
   const { loading, setLoading } = useLoading()
 
-  async function handleSubmit(e: any) {
+  async function handleSubmit(e: React.SyntheticEvent) {
     e.preventDefault();
 
     if (!name || !email || !password) {

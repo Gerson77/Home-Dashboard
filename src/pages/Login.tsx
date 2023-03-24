@@ -26,46 +26,47 @@ export function Login() {
   const { alert, setAlert, alertInfo, setAlertInfo, hiddenBoxAlert } =
     useAlertBox();
 
-  const handleLogin = async (event: any) => {
-    if(event.keyCode === 13) {
+  const handleLogin = async () => {
+    if (!email || !password) {
+      setAlertInfo({
+        status: false,
+        title: "Oops",
+        text: "Email/senha vázio",
+      });
+      setAlert(true);
+    } else {
+      try {
+        const isLogged = await api.signin(email, password);
 
-      if (!email || !password) {
+        if (isLogged) {
+          dispatch(
+            setLogin({
+              user: isLogged.user,
+              token: isLogged.token,
+            })
+          );
+          setLoading(true);
+          let timer: number;
+          timer = setInterval(() => {
+            setLoading(false);
+            navigate("/dashboard");
+            clearInterval(timer);
+          }, 500);
+        }
+      } catch (err: any) {
         setAlertInfo({
           status: false,
           title: "Oops",
-          text: "Email/senha vázio",
+          text: "Email/senha incorreto",
         });
         setAlert(true);
-      } else {
-        try {
-          const isLogged = await api.signin(email, password);
-    
-          if (isLogged) {
-            dispatch(
-              setLogin({
-                user: isLogged.user,
-                token: isLogged.token,
-              })
-            );
-            setLoading(true);
-            let timer: any;
-            timer = setInterval(() => {
-              setLoading(false);
-              navigate("/dashboard");
-              clearInterval(timer);
-            }, 500);
-          }
-        } catch (err: any) {
-          setAlertInfo({
-            status: false,
-            title: "Oops",
-            text: "Email/senha incorreto",
-          });
-          setAlert(true);
-        }
       }
     }
   };
+
+  const eventCapture = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if(event.key === 'Enter') return handleLogin()
+  }
 
   return (
     <div className={styles.containerLogin}>
@@ -82,7 +83,7 @@ export function Login() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Digite seu email..."
-                onKeyDown={handleLogin}
+                onKeyDown={eventCapture}
               />
               <label>
                 <FaLock /> Senha:
@@ -92,7 +93,7 @@ export function Login() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Digite sua senha..."
-                onKeyDown={handleLogin}
+                onKeyDown={eventCapture}
               />
               <input type="submit" value="Enviar" onClick={handleLogin} />
             </div>

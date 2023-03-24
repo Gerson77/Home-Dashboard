@@ -3,7 +3,7 @@ import styles from "../Home/css/BoxAlert.module.css";
 
 type AlertData = {
   text: string;
-  event: any;
+  event: React.MouseEventHandler<HTMLButtonElement>;
   title: string;
   status: boolean;
 };
