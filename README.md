@@ -1,7 +1,12 @@
 # Projeto: Página Home + Dashboard
 
+
+<h1>
+    <img src="public/Home+addClient.gif" align="center" />
+</h1>
+
 ## Sobre: 
-- Projetos desenvolvido para aplicar conhecimentos adquiridos em cursos 
+- Projetos desenvolvido para aplicar conhecimentos adquiridos em ReactJs 
 
 ### Pendências:
 ---
@@ -14,7 +19,7 @@
 - [x] Status do atendimento do cliente: em espera, em tratativa e concluído
 - [x] enviar solicitação com enter
 - [ ] Revisar o css das páginas e components
-- [ ] revisar os tipos 
+- [x] revisar os tipos 
 
 
 
