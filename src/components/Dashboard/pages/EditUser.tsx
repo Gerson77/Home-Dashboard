@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 export function EditUser() {
   const api = useApi();
   const { id } = useParams<{ id: string }>();
-
+  
   const token = useSelector((state: any) => state.token)
 
   const [name, setName] = useState("");
@@ -39,7 +39,7 @@ export function EditUser() {
     result()
   }, []);
 
-  async function handleSubmit(e: any) {
+  async function handleSubmit(e: React.FormEvent<HTMLInputElement>) {
     e.preventDefault();
 
     if (!name || !email) {

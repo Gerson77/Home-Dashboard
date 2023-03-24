@@ -1,26 +1,37 @@
-import { FaInfo } from "react-icons/fa";
 import styles from "../css/Modal.module.css";
+import { FiInfo } from "react-icons/fi";
 
 type propsInfo = {
   userId: string;
   userName: string;
   modalOpen: any;
   actionUser: any;
+  title: string
+  text: string
+  titleBtn: string
 };
 
-const ModalContainer = ({ userId, userName, modalOpen, actionUser }: propsInfo) => {
+const ModalContainer = ({
+  userId,
+  userName,
+  modalOpen,
+  actionUser,
+  title,
+  text,
+  titleBtn
+}: propsInfo) => {
   return (
     <div className={styles.modalContainer}>
       <div className={styles.modal}>
-        <FaInfo />
-        <h2>Excluir</h2>
-        <p>Deseja excluir o usuário {userName}?</p>
+        <FiInfo />
+        <h2>{title}</h2>
+        <p>{text} {userName}?</p>
         <div className={styles.buttons}>
           <button
             className={`${styles.btn} ${styles.btnEdit}`}
             onClick={() => actionUser(userId)}
           >
-            Sim, deletar
+            {titleBtn}
           </button>
           <button
             className={`${styles.btn} ${styles.btnDel}`}

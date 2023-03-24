@@ -151,6 +151,9 @@ export function ListClients() {
           {filteredUser.length === 0 && <p>No User found</p>}
           {isModal && (
             <ModalContainer
+              title={'Atualizar'}
+              text={'Deseja concluir o atedimento de'}
+              titleBtn={'Sim, concluir'}
               userId={userId}
               userName={userName}
               modalOpen={modalOpen}

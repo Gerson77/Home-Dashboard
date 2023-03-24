@@ -96,7 +96,10 @@ export function ListUsers() {
           ))}
           {modal && (
             <ModalContainer
-              userId={userId}
+            title={'Excluir'}
+            text={'Deseja excluir o usuário'}
+            titleBtn={'Sim, deletar'}
+            userId={userId}
               userName={userName}
               modalOpen={modalOpen}
               actionUser={deleteUser}

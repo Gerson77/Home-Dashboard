@@ -47,7 +47,7 @@ export function ManagementClients() {
       <div className={styles.boxContent}>
         <div className={styles.boxSearch}>
           <h2>
-            <FaUsers /> Gerenciar Clientes
+            <FaUsers /> Clientes concluídos
           </h2>
           <div>
             <input

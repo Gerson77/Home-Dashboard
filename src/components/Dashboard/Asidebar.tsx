@@ -1,4 +1,4 @@
-import { FaTable, FaUser } from "react-icons/fa";
+import { FaTable, FaUser, FaUsers } from "react-icons/fa";
 import { BsGear } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
@@ -34,7 +34,7 @@ export function Asidebar({ asideStyle }: any) {
           <Link to="/dashboard/add-user">Adicionar usuário</Link>
           <Link to="/dashboard/list-users">Listar usuários</Link>
           <Link to="/dashboard/edit-user">Editar usuário</Link>
-          <h2>Gestão de clientes</h2>
+          <h2><FaUsers /> Gestão de clientes</h2>
           <Link to="/dashboard/list-clients">Listar clientes</Link>
           <Link to="/dashboard/management-clients">Gerenciar clientes</Link>
           <h2>
