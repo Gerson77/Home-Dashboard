@@ -9,13 +9,12 @@ import { BoxAlert } from "../../Home/BoxAlert";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import type { RootState } from '../../../main'
+import type { RootState } from "../../../main";
 
 export function EditUser() {
   const api = useApi();
   const { id } = useParams<{ id: string }>();
-  
-  const token = useSelector((state: RootState) => state.token)
+  const token = useSelector((state: RootState) => state.token);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -25,20 +24,22 @@ export function EditUser() {
     useAlertBox();
   const { loading, setLoading } = useLoading();
 
+  const result = async () => {
+    const userEdited = await api
+      .getById(`user/${id}`, token)
+      .then((res) => {
+        setName(res.data.name);
+        setEmail(res.data.email);
+        setPassword("");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    return userEdited;
+  };
   useEffect(() => {
-    const result = async () => {
-      return api
-        .getById(`user/${id}`, token)
-        .then((res) => {
-          setName(res.data.name)
-          setEmail(res.data.email)
-          setPassword('')
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    };
-    result()
+    result();
   }, []);
 
   async function handleSubmit(e: React.FormEvent<HTMLInputElement>) {
@@ -60,11 +61,15 @@ export function EditUser() {
       });
     } else {
       const user = api
-        .editUser(`user/${id}`, {
-          name,
-          email,
-          password,
-        }, token)
+        .editUser(
+          `user/${id}`,
+          {
+            name,
+            email,
+            password,
+          },
+          token
+        )
         .then((res) => {
           setLoading(true);
           setAlert(true);

@@ -4,6 +4,7 @@ import { MdDashboard } from "react-icons/md";
 import { Link } from "react-router-dom";
 import useGetAll from "../../hooks/useGetAll/useGetAll";
 import { Loading } from "../Home/Loading";
+import { ResultData } from "../../types/ResultData";
 
 export function Content() {
   const { result, loading } = useGetAll('clients')
@@ -11,6 +12,14 @@ export function Content() {
   
   const usersLimt = useGetAll('users')  
   const users = usersLimt.result.slice(0, 6)
+
+  const clientsPedent = result.filter(
+    (client: ResultData) => client.status === false
+  );
+
+  const clientsResolv = result.filter(
+    (client: ResultData) => client.status === true
+  );
 
   return (
     <div className={styles.containerContent}>
@@ -26,11 +35,11 @@ export function Content() {
           </div>
           <div className={styles.boxCard}>
             <h2>Clientes atendidos</h2>
-            <p>10</p>
+            <p>{clientsResolv.length}</p>
           </div>
           <div className={styles.boxCard}>
             <h2>Clientes em espera</h2>
-            <p>8</p>
+            <p>{clientsPedent.length}</p>
           </div>
         </div>
       </div>

@@ -17,8 +17,7 @@ function App() {
   const api = useApi();
 
   const valideToken = async () => {
-    const storageData = isAuth;
-    const data = await api.validateToken(userAuth?.email, storageData);
+    const data = await api.validateToken(userAuth?.email, isAuth);
     
     return data;
   };

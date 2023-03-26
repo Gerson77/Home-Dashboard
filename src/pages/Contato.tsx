@@ -43,6 +43,7 @@ export function Contato() {
           name,
           email,
           phone: phone.phone,
+          status: false
         })
         .then(async(res) => {
           setLoading(true);
@@ -62,6 +63,12 @@ export function Contato() {
           });
         });
       return user;
+    }
+  }
+
+  const handleKeyEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if(e.code === 'Enter') {
+      handleSubmit(e)
     }
   }
 
@@ -111,6 +118,7 @@ export function Contato() {
                 placeholder="Digite seu nome..."
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                onKeyDown={handleKeyEnter}
               />
               <label>
                 <FaEnvelope /> Email:
@@ -120,6 +128,7 @@ export function Contato() {
                 placeholder="Digite seu email..."
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                onKeyDown={handleKeyEnter}
               />
               <label>
                 <FaPhone /> Telefone:
@@ -130,6 +139,7 @@ export function Contato() {
                   name="phone"
                   onChange={handleChange}
                   max={11}
+                  onKeyDown={handleKeyEnter}
                 />
               </div>
               <input type="submit" value="Enviar" onClick={handleSubmit} />
