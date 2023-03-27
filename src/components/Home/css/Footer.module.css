@@ -1,6 +1,10 @@
 .containerFooter {
+    width: 100%;
     text-align: center;
     background-color: #090909;
-    padding: 20px 0;
+    padding: 18px 0;
     color: white;
+    
+    position: relative;
+    bottom: 0;
 }

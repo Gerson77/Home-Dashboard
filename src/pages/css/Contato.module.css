@@ -9,8 +9,8 @@
 
 .overlayForm {
   width: 100%;
-  min-height: 100vh;
-  padding: 30px 0;
+  min-height: calc(100vh - 55px);
+  padding: 28px 0;
   background-color: rgba(0, 0, 0, 0.897);
   background: linear-gradient(
     137deg,

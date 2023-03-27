@@ -2,7 +2,7 @@
 
 ### **Apresentação da página Home + Cadastro de usuários**
 <h1>
-    <img src="public/Home+addClient.gif" align="center" />
+    <img src="public/Home.gif" align="center" />
 </h1>
 
 ### **Funcionalidades do painel**
