@@ -1,12 +1,21 @@
 # Projeto: Página Home + Dashboard
 
-
+### **Apresentação da página Home + Cadastro de usuários**
 <h1>
     <img src="public/Home+addClient.gif" align="center" />
 </h1>
 
+### **Funcionalidades do painel**
+- Login
+- Lista de usuários do painel
+- Lista de clientes cadastrados
+
+<h1>
+    <img src="public/Home+addClient+Func.gif" align="center" />
+</h1>
+
 ## Sobre: 
-- Projetos desenvolvido para aplicar conhecimentos adquiridos em ReactJs 
+- Projetos desenvolvido para aplicar conhecimentos em ReactJs 
 
 ### Pendências:
 ---
