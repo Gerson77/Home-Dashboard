@@ -26,7 +26,7 @@ export function Content() {
       {loading && <Loading />}
       <div className={styles.boxContent}>
         <h2>
-          <MdDashboard /> Painel de controle - Station Code
+          <MdDashboard /> Dashboard - Station Code
         </h2>
         <div className={styles.card}>
           <div className={styles.boxCard}>

@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setLogout } from '../../state'
 import { RootState } from "../../main";
 
-export default function useGetAll(route: string) {
+export default function userGetAll(route: string) {
   const api = useApi();
   const [result, setData] = useState<ResultData[]>([]);
   const [loading, setLoading] = useState(false);

@@ -9,30 +9,47 @@
 - Login
 - Lista de usuários do painel
 - Lista de clientes cadastrados
+- Adicionar usuário 
+- Editar usuário
 
 <h1>
     <img src="public/Home+addClient+Func.gif" align="center" />
 </h1>
+<h1>
+    <img src="public/Home+addClient+addUser.gif" align="center" />
+</h1>
 
-## Sobre: 
-- Projetos desenvolvido para aplicar conhecimentos em ReactJs 
+## **Sobre**: 
+ Projetos simples desenvolvido para aplicar conhecimentos em ReactJs no Front-end junto com o NodeJs [Back-end do projeto](https://github.com/Gerson77/API-Home-Dashboard.git).
 
-### Pendências:
----
-- [x] Criar usuário pela dash
-- [x] Editar o usuário atual na dash
-- [x] Deletar usuário
-- [x] Máscara no campo phone da página de contato
-- [x] Criar página 404 para rota não encontrada
-- [x] Criar box card na dash: media 500px
-- [x] Status do atendimento do cliente: em espera, em tratativa e concluído
-- [x] enviar solicitação com enter
-- [ ] Revisar o css das páginas e components
-- [x] revisar os tipos 
+### **Instruções para executar o projeto**:
 
+Execute os comando abaixo:
+```bash
+# Clonar o repositório
+$ git clone https://github.com/Gerson77/Home-Dashboard.git
 
+# Entrar no diretório
+$ cd diretório
 
----
+# Crie um arquivo .env-local com a url da API 
+
+$ touch .env-local
+
+# Conteúdo do arquivo
+VITE_NODE_API_URL="http://IP-API:PORT"
+
+# Instalar as dependências
+$ init i
+
+# Iniciando o projeto:
+$ npm run dev
+
+# ou 
+
+$ npm run host
+```
+
 
 OBS: 
 
