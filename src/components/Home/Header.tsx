@@ -37,6 +37,11 @@ export function Header() {
               Contato
             </Link>
           </li>
+          <li>
+            <Link className={styles.item} to="/login">
+              Login
+            </Link>
+          </li>
         </ul>
         <FaBars onClick={menuOpen} />
       </div>
