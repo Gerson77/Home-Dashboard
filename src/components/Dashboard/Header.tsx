@@ -24,7 +24,7 @@ export function Header({ event }: PropsHeader) {
           <Link to="/dashboard">
             <FaHouseUser /> Página inicial
           </Link>
-          <a href="/login" onClick={() => dispatch(setLogout())}>
+          <a href="/" onClick={() => dispatch(setLogout())}>
             <GiExitDoor />
           </a>
         </div>

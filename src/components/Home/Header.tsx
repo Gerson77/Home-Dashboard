@@ -49,6 +49,7 @@ export function Header() {
         <ul>
           <Link to="/">Home</Link>
           <Link to="/contato">Contato</Link>
+          <Link to="/login">Login</Link>
         </ul>
       </div>
     </div>
