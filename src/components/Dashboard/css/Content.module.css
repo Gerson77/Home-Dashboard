@@ -47,15 +47,27 @@
 
 .boxCard:nth-child(1) {
   /* background-color: #00aa22; */
-  background: linear-gradient(190deg, #42FF00 5.05%, rgba(10, 35, 1, 0.753) 103.87%);
+  background: linear-gradient(
+    190deg,
+    #42ff00 5.05%,
+    rgba(10, 35, 1, 0.753) 103.87%
+  );
 }
 .boxCard:nth-child(2) {
   /* background-color: #bb1b15; */
-  background: linear-gradient(190deg, #00A2FD 3.39%, rgba(0, 0, 0, 0.753) 105.65%);
+  background: linear-gradient(
+    190deg,
+    #00a2fd 3.39%,
+    rgba(0, 0, 0, 0.753) 105.65%
+  );
 }
 .boxCard:nth-child(3) {
   /* background-color: #e2b111; */
-  background: linear-gradient(190deg, #FF5C00 12.22%, rgba(78, 32, 6, 0.753) 102.51%);
+  background: linear-gradient(
+    190deg,
+    #ff5c00 12.22%,
+    rgba(78, 32, 6, 0.753) 102.51%
+  );
 }
 .order {
   background-color: #4a4a4a;
@@ -101,7 +113,7 @@
 }
 
 .btn {
-  padding: 4px 6px;
+  padding: 6px 8px;
   text-align: center;
   text-decoration: none;
   color: white;
@@ -109,14 +121,14 @@
   margin: 5px;
   position: relative;
   top: -5px;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff6a;
   cursor: pointer;
-  background-color: rgb(70, 144, 209);
-  font-weight: 500;
+  background-color: rgb(28, 117, 194);
+  font-weight: bold;
 }
 
 .btnDel {
-  background-color: rgb(209, 70, 70);
+  background-color: rgb(189, 23, 23);
 }
 
 .btn a {
@@ -162,7 +174,7 @@ form input {
   border-radius: 3px;
 }
 
-form input[type=submit] {
+form input[type="submit"] {
   height: 52px;
   margin: 30px 0;
   cursor: pointer;
@@ -170,10 +182,10 @@ form input[type=submit] {
   border: 1px solid rgb(204, 204, 204);
   color: white;
   font-weight: bold;
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out 0.3s;
 }
 
-form input[type=submit]:hover {
+form input[type="submit"]:hover {
   background-color: #048d20;
 }
 
@@ -210,8 +222,8 @@ form input[type="file"] {
   background-color: rgb(43, 172, 92);
   cursor: pointer;
   position: relative;
-  top: 12%;
-  left: 55%;
+  top: 16%;
+  left: 53.5%;
   transform: translate(-70%, -150%);
 }
 .file svg {
@@ -236,6 +248,39 @@ form img {
     left: 0;
     transition: 300ms ease-in-out;
   }
+
+  /* Tabela */
+  .row:nth-child(1) {
+    display: none;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    background-color: #eaebf0;
+    border-radius: 6px;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 3px 0;
+    border: none;
+  }
+
+  .alignHorizon {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .btn {
+    width: 96%;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -249,4 +294,10 @@ form img {
     width: 95%;
     padding: 10px;
   }
+
+  .alignHorizon {
+    flex-direction: column;
+    gap: 0px;
+  }
+
 }

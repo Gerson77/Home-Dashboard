@@ -8,7 +8,6 @@ import { BoxAlert } from "../components/Home/BoxAlert";
 import useAlertBox from "../hooks/useAlert/useAlert";
 import { useApi } from "../hooks/useApi/useApi";
 
-// state redux
 import { useDispatch } from "react-redux";
 // @ts-ignore
 import { setLogin } from "../state";
@@ -46,12 +45,8 @@ export function Login() {
             })
           );
           setLoading(true);
-          let timer: number;
-          timer = setInterval(() => {
-            setLoading(false);
-            navigate("/dashboard");
-            clearInterval(timer);
-          }, 500);
+          setLoading(false);
+          navigate("/dashboard");
         }
       } catch (err: any) {
         setAlertInfo({
@@ -65,8 +60,8 @@ export function Login() {
   };
 
   const eventCapture = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if(event.key === 'Enter') return handleLogin()
-  }
+    if (event.key === "Enter") return handleLogin();
+  };
 
   return (
     <div className={styles.containerLogin}>

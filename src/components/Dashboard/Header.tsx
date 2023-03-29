@@ -8,7 +8,7 @@ import { setLogout } from "../../state";
 import { useDispatch } from "react-redux";
 
 type PropsHeader = {
-  event: React.MouseEventHandler<SVGElement>;
+  event: React.MouseEventHandler<HTMLDivElement>;
 };
 
 export function Header({ event }: PropsHeader) {
@@ -18,15 +18,19 @@ export function Header({ event }: PropsHeader) {
     <div className={styles.top}>
       <div className={styles.center}>
         <div className={styles.menuBtn}>
-          <FaBars onClick={event} />
+          <div onClick={event} className={styles.btnMenu}>
+            <div className={styles.btnMenu}></div>
+            <div className={styles.btnMenu}></div>
+            <div className={styles.btnMenu}></div>
+          </div>
         </div>
         <div className={styles.loggout}>
           <Link to="/dashboard">
             <FaHouseUser /> Página inicial
           </Link>
-          <a href="/" onClick={() => dispatch(setLogout())}>
-            <GiExitDoor />
-          </a>
+          <Link to="/">
+            <GiExitDoor onClick={() => dispatch(setLogout())} />
+          </Link>
         </div>
       </div>
     </div>

@@ -82,7 +82,7 @@ export function ListUsers() {
                 {user.isAdmin && <span>Administrador</span>}
                 {!user.isAdmin && <span>Normal</span>}
               </div>
-              <div className={styles.col}>
+              <div className={`${styles.alignHorizon} ${styles.col}`}>
                 <button className={styles.btn}>
                   <Link to={`/dashboard/edit-user/${user.id}`}>Editar</Link>
                 </button>

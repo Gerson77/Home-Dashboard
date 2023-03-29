@@ -31,12 +31,19 @@
 }
 
 .menuBtn {
-  /* float: left; */
   color: white;
   cursor: pointer;
 }
 .menuBtn i {
   font-size: 18px;
+}
+
+.btnMenu > div{
+  background-color: #fff;
+  width: 26px;
+  height: 2px;
+  margin: 4px 0;
+  border-radius: 2px;
 }
 
 .top {

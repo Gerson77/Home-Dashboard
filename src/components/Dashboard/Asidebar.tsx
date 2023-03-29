@@ -20,7 +20,6 @@ export function Asidebar({ asideStyle }: any) {
             <FaUser />
             <div className={styles.titleUser}>
               <p>{user?.name}</p>
-
               <p>
                 {user?.isAdmin && <span>Administrador</span>}
                 {!user?.isAdmin && <span>Normal</span>}
@@ -32,16 +31,16 @@ export function Asidebar({ asideStyle }: any) {
           <h2>
             <FaTable /> Administração painel
           </h2>
-          <Link to="/dashboard/add-user">Adicionar usuário</Link>
-          <Link to="/dashboard/list-users">Listar usuários</Link>
-          <Link to="/dashboard/edit-user">Editar usuário</Link>
+          <Link className="itemMenu" to="/dashboard/add-user">Adicionar usuário</Link>
+          <Link className="itemMenu" to="/dashboard/list-users">Listar usuários</Link>
+          <Link className="itemMenu" to="/dashboard/edit-user">Editar usuário</Link>
           <h2><FaUsers /> Gestão de clientes</h2>
-          <Link to="/dashboard/list-clients">Listar clientes</Link>
-          <Link to="/dashboard/management-clients">Gerenciar clientes</Link>
+          <Link className="itemMenu" to="/dashboard/list-clients">Listar clientes</Link>
+          <Link className="itemMenu" to="/dashboard/management-clients">Gerenciar clientes</Link>
           <h2>
             <BsGear /> Configuração Geral
           </h2>
-          <Link to="/dashboard/edit">Editar</Link>
+          <Link className="itemMenu" to="/dashboard/edit">Editar</Link>
         </div>
       </div>
     </aside>

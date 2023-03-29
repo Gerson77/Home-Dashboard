@@ -38,7 +38,7 @@ export function Header() {
             </Link>
           </li>
           <li>
-            <Link className={styles.item} to="/login">
+            <Link className={styles.itemBtn} to="/login">
               Login
             </Link>
           </li>

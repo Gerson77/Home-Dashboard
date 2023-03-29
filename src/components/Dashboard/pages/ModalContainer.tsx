@@ -25,7 +25,7 @@ const ModalContainer = ({
       <div className={styles.modal}>
         <FiInfo />
         <h2>{title}</h2>
-        <p>{text} {userName}?</p>
+        <p>{text} <strong>{userName}</strong>?</p>
         <div className={styles.buttons}>
           <button
             className={`${styles.btn} ${styles.btnEdit}`}

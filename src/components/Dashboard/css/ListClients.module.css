@@ -70,8 +70,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 0;
+  padding: 12px 5px;
   align-items: center;
+
 }
 
 .boxSearch input {
@@ -79,18 +80,18 @@
   padding: 4px 10px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 580px) {
   .rowCard {
     width: 100%;
   }
 
   .boxSearch {
-    display: grid;
-    align-items: center;
-  }
-  .boxSearch input {
-    width: 100%;
-    padding: 4px 10px;
+    display: block;
+    padding: 10px 2%;
+    background-color: #eee;
   }
 
+  .boxSearch input {
+    width: 100%;
+  }
 }

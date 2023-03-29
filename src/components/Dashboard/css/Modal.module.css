@@ -27,6 +27,10 @@
   padding: 20px 0;
 }
 
+.modal p {
+  text-align: center;
+}
+
 .modal svg {
   padding-top: 20px;
   font-size: 100px;
@@ -64,4 +68,3 @@
 .btnDel:hover {
   background-color: rgb(189, 3, 3);
 }
-

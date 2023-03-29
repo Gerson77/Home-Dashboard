@@ -7,11 +7,11 @@ import { Loading } from "../Home/Loading";
 import { ResultData } from "../../types/ResultData";
 
 export function Content() {
-  const { result, loading } = useGetAll('clients')
-  const clients = result.slice(0, 6)
-  
-  const usersLimt = useGetAll('users')  
-  const users = usersLimt.result.slice(0, 6)
+  const { result, loading } = useGetAll("clients");
+  const clients = result.slice(0, 6);
+
+  const usersLimt = useGetAll("users");
+  const users = usersLimt.result.slice(0, 6);
 
   const clientsPedent = result.filter(
     (client: ResultData) => client.status === false

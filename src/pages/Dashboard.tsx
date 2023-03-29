@@ -16,9 +16,25 @@ export function Dashboard() {
   const [isContent, setIsContent] = useState(styles.content);
 
   function openMenu() {
-    isOpen === styles.boxMenu ? setIsOpen(styles.disable) : setIsOpen(styles.boxMenu);
-    isContent === styles.content ? setIsContent(styles.contentActive) : setIsContent(styles.content);
+    isOpen === styles.boxMenu
+      ? setIsOpen(styles.disable)
+      : setIsOpen(styles.boxMenu);
+    isContent === styles.content
+      ? setIsContent(styles.contentActive)
+      : setIsContent(styles.content);
   }
+
+  document.addEventListener("click", (e: Event) => {
+    const el = e.target as HTMLInputElement;
+
+    if (
+      el.classList.contains("itemMenu") ||
+      el.classList.value !== "_btnMenu_uhwcs_41"
+    ) {
+      setIsOpen(styles.boxMenu);
+      setIsContent(styles.content);
+    }
+  });
 
   useEffect(() => {
     const changeResize = () => {
