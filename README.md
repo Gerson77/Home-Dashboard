@@ -2,7 +2,7 @@
 
 ## **Demonstração do projeto**: 
 
-Click para acessar: [Home+Dashboard](https://home-dashboard-hwfjq7u37-gerson77.vercel.app/)
+Click para acessar: [Home+Dashboard](https://home-dashboard-blush.vercel.app/)
 
 ---
 ### **Apresentação da página Home + Cadastro de usuários**
