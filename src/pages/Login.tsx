@@ -35,7 +35,6 @@ export function Login() {
       setAlert(true);
     } else {
       try {
-        setLoading(true);
         const isLogged = await api.signin(email, password);
 
         if (isLogged) {
