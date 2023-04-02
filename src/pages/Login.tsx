@@ -35,6 +35,7 @@ export function Login() {
       setAlert(true);
     } else {
       try {
+        setLoading(true);
         const isLogged = await api.signin(email, password);
 
         if (isLogged) {
@@ -60,7 +61,7 @@ export function Login() {
   };
 
   const eventCapture = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter") return handleLogin();
+    if (event.key === "Enter" || event.key === 'NumpadEnter') return handleLogin();
   };
 
   return (

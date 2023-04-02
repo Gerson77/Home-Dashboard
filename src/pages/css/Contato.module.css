@@ -48,7 +48,7 @@
   width: 30%;
   max-width: 600px;
   margin: 10px 0;
-  padding: 10px;
+  padding: 50px 30px;
 }
 
 .boxForm label {
@@ -107,7 +107,7 @@
   background-color: rgb(37, 11, 62);
 }
 
-@media screen and (max-width: 1144px) {
+@media screen and (max-width: 1280px) {
   .painel {
     margin: 10px auto;
     width: 100%;
@@ -116,6 +116,7 @@
   .boxForm {
     width: 100%;
     margin: 10px auto;
+    padding: 10px 30px;
   }
 
   .overlayForm {
@@ -146,4 +147,5 @@
     font-size: 36px;
     text-align: center;
   }
+
 }

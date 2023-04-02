@@ -67,8 +67,8 @@ export function Contato() {
   }
 
   const handleKeyEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if(e.code === 'Enter') {
-      handleSubmit(e)
+    if(e.code === 'Enter' || e.code === 'NumpadEnter') {
+      return handleSubmit(e)
     }
   }
 
