@@ -59,7 +59,7 @@ export function Contato() {
           setAlertInfo({
             status: false,
             title: "Erro ao cadastrar",
-            text: `${err.response.data}`,
+            text: 'Ocorreu um erro ao cadastrar!',
           });
         });
       return user;

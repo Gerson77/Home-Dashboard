@@ -4,7 +4,7 @@ import { FiInfo } from "react-icons/fi";
 type propsInfo = {
   userId: string;
   userName: string;
-  modalOpen: any;
+  modalOpen: React.MouseEventHandler<HTMLButtonElement>;
   actionUser: any;
   title: string
   text: string
