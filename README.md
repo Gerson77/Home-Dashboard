@@ -1,7 +1,5 @@
 # Projeto: Página Home + Dashboard
 
-## **Demonstração do projeto**: 
-
 ---
 ### **Apresentação da página Home + Cadastro de usuários**
 <h1>
