@@ -2,8 +2,6 @@
 
 ## **Demonstração do projeto**: 
 
-Click para acessar: [Home+Dashboard](https://home-dashboard-blush.vercel.app/)
-
 ---
 ### **Apresentação da página Home + Cadastro de usuários**
 <h1>
